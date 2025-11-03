@@ -1,0 +1,130 @@
+{
+    "info": {
+        "name": "Parabank API - Account Balance Testing",
+        "_postman_id": "abcd1234-5678-efgh-ijkl-9012mnopqrst",
+        "description": "Task 6: API Testing for Account Balance endpoint (JSON format)",
+        "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+    },
+    "item": [
+        {
+            "name": "Positive 1 - Valid Account ID (12345)",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://parabank.parasoft.com/parabank/services/bank/accounts/12345/balance",
+                    "protocol": "https",
+                    "host": [
+                        "parabank",
+                        "parasoft",
+                        "com"
+                    ],
+                    "path": [
+                        "parabank",
+                        "services",
+                        "bank",
+                        "accounts",
+                        "12345",
+                        "balance"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Positive 2 - Valid Account ID (12456)",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://parabank.parasoft.com/parabank/services/bank/accounts/12456/balance",
+                    "protocol": "https",
+                    "host": [
+                        "parabank",
+                        "parasoft",
+                        "com"
+                    ],
+                    "path": [
+                        "parabank",
+                        "services",
+                        "bank",
+                        "accounts",
+                        "12456",
+                        "balance"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Negative 1 - Invalid Account ID (99999)",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://parabank.parasoft.com/parabank/services/bank/accounts/99999/balance",
+                    "protocol": "https",
+                    "host": [
+                        "parabank",
+                        "parasoft",
+                        "com"
+                    ],
+                    "path": [
+                        "parabank",
+                        "services",
+                        "bank",
+                        "accounts",
+                        "99999",
+                        "balance"
+                    ]
+                }
+            },
+            "response": []
+        },
+        {
+            "name": "Negative 2 - Missing Account ID",
+            "request": {
+                "method": "GET",
+                "header": [
+                    {
+                        "key": "Accept",
+                        "value": "application/json"
+                    }
+                ],
+                "url": {
+                    "raw": "https://parabank.parasoft.com/parabank/services/bank/accounts//balance",
+                    "protocol": "https",
+                    "host": [
+                        "parabank",
+                        "parasoft",
+                        "com"
+                    ],
+                    "path": [
+                        "parabank",
+                        "services",
+                        "bank",
+                        "accounts",
+                        "",
+                        "balance"
+                    ]
+                }
+            },
+            "response": []
+        }
+    ]
+}
